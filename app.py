@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Replace with your OpenRouter API key
 # OPENROUTER_API_KEY = "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"
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = "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"
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 # Folder to store chat history
@@ -75,7 +75,7 @@ def chat():
         "Content-Type": "application/json"
     }
     payload = {
-        "model": "deepseek/deepseek-r1-distill-qwen-32b:free",  # You can change the model as needed
+        "model": "qwen/qwq-32b:free",  # You can change the model as needed
         "messages": chat_history[-10:]  # Send last 10 messages for context
     }
 
